@@ -1,22 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Comfortaa', cursive;
-}
 body{
 	background: url(../images/hero.jpg) no-repeat center center fixed;
 	background-size: cover;
 	filter: grayscale(40%);
-	width: 100vw;
-	height: 100vh;
+  font-family:  'Comfortaa', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	min-width: 100vw;
+	min-height: 100vh;
+  line-height: 1.4em;
 }
 
-
-
-
-
+/* ###### MENU ###### */
 .menu-wrapper {
   position: fixed;
   width: 250px;
@@ -109,18 +105,18 @@ body{
 .nav-links li:hover, .active, a:hover {
   color: #000;
 }
-
-
+/* ###### HERO ###### */
 .hero{
   width: 100vw;
 	height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.greeting {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  perspective: 800px;
-  margin-top: 10%;
+.name {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
 }
 span {
   display: inline-block;
@@ -171,7 +167,7 @@ span:nth-child(12) {
   to {transform: rotateX(0deg);
   }
 }
-
+/* ###### DOWN ARROW ###### */
 .arrow{
   position: absolute;
   bottom: 10px;
@@ -186,52 +182,96 @@ span:nth-child(12) {
 	40% {transform: translateY(-30px);}
 	60% {transform: translateY(-15px);}
 }
-
-.two{
-  background: url(../images/postit.png) no-repeat center center;
-  background-size: 100%;
-  height: 784px;
-  width: 74%;
-  float: left;
+/* ###### ABOUT SECTION ###### */
+.note {
+    max-width: 50vw;
+    background: #F7E999;
+    padding: 40px;
+    border-radius: 6px/18px 0;
+    margin: 20px 10px;
+    box-shadow: 0px 4px 5px rgba(0,0,0,0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(2deg);  
 }
-.two h2{
-  text-align: center;
-  margin-top: 30%;
-}
-.two p{
-  text-align: justify;
-  margin-top: 2%;
-  margin-left: 20%;
-  width: 60%;
-  line-height: 3;
-  padding: 10px;
-}
-.beforesection, .aftersection{
-/*    opacity: 0;*/
-  height: 500px;
-  width: 13%;
-  float: left;
-  color: #000;
-}
-.three{
-  background: url(../images/ipad.png) no-repeat center center;
-  background-size: 100%;
-  height: 800px;
-  width: 74%;
-  clear: both;
-  margin: auto;
-}
-.four{
-  background: url(../images/chalkboard.jpg) center center;
-  height: 275px;
-  width: 500px;
-  padding: 20px;
-  box-shadow: 10px 10px 20px #000;
-  margin: 100px 29%;
-  text-align: center;
-  transform: rotate(7deg);
+.note::before {
+	  content: ""; 
+    width: 20vw;
+	  height: 28px;
+    border-radius: 6px/18px 0;
+	  background: rgba(229, 229, 229, 0.40);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 55px;
+    left: 30%;
 }
 
+/* ###### WORK SECTION ###### */
+.polaroid {
+    width: 50vh;
+    height: 60vh;
+    background: #f5f5f5;
+    margin: 20px auto;
+    box-shadow: 3px 2px 7px 2px rgba(0,0,0,0.85);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(-2deg);  
+}
+.polaroid_photo {
+    width: 50vh;
+    height: 45vh;
+    border: 20px solid #f5f5f5;
+    background: #222;
+    box-sizing: border-box;
+    align-self: flex-start;
+}
+.polaroid_photo img {
+    width: 100%;
+    height: 100%;
+}
+.polaroid_content {
+    flex: 1;
+    height: 20vh;
+    width: 50vh;
+}
+
+/* ###### CONTACT SECTION ###### */
+.contact_card {
+  background: #fff;
+}
+
+/* ###### BUTTONS ###### */
+.button {
+    font-size: 1em;
+    color: #222;
+    padding: 10px;
+    border: 1px dashed #222;
+    border-radius: 10px;
+    background: transparent;
+    margin: 20px;
+    transition: all 0.4s ease;
+    cursor: pointer;   
+}
+.button:hover {
+    color: #222;
+    background-color: #f4f4f4;
+    border: none;
+    box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75);
+}
+.black {
+    color: #222;
+    padding: 2px 8px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    margin: 0 5px;
+}
+
+/* ###### SOCIAL MEDIA ###### */
 .social_nav {
   padding: 0;
   list-style: none;
@@ -276,14 +316,3 @@ span:nth-child(12) {
 .github, .linkedin, .gmail {
   color: #fff;
 }
-.resume_button{
-  font-size: 16px;
-  color: #888;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-}
-.resume_button a{
-  text-decoration: none;
-}
-
