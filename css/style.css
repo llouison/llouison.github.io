@@ -6,10 +6,12 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 	min-width: 100vw;
 	min-height: 100vh;
   line-height: 1.4em;
+}
+a {
+  text-decoration: none;
 }
 
 /* ###### MENU ###### */
@@ -19,7 +21,7 @@ body{
   height: 250px;
   top: 0;
   margin-top: 20px;
-  margin-left: 10px;
+  right: 75vw;
 }
 .menu {
   position: relative;
@@ -121,7 +123,7 @@ body{
 span {
   display: inline-block;
   color: #fff;
-  font-size: 7em;
+  font-size: 5em;
   transform-origin: 50% 70%;
 }
 span:nth-child(1) {
@@ -172,7 +174,7 @@ span:nth-child(12) {
   position: absolute;
   bottom: 10px;
   left: 50%;
-  animation-name: bounce;
+  /*animation-name: bounce;*/
   animation-fill-mode: both;
   animation-iteration-count: infinite;
   animation-duration: 2s;
@@ -184,11 +186,11 @@ span:nth-child(12) {
 }
 /* ###### ABOUT SECTION ###### */
 .note {
-    max-width: 50vw;
+    max-width: 40vw;
     background: #F7E999;
     padding: 40px;
     border-radius: 6px/18px 0;
-    margin: 20px 10px;
+    margin: 70px 10px;
     box-shadow: 0px 4px 5px rgba(0,0,0,0.5); 
     display: flex;
     flex-direction: column;
@@ -209,11 +211,18 @@ span:nth-child(12) {
 }
 
 /* ###### WORK SECTION ###### */
+#projects {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  margin-bottom: 70px;
+}
 .polaroid {
     width: 50vh;
     height: 60vh;
     background: #f5f5f5;
-    margin: 20px auto;
+    margin: 30px;
     box-shadow: 3px 2px 7px 2px rgba(0,0,0,0.85);
     display: flex;
     flex: 1;
@@ -221,6 +230,12 @@ span:nth-child(12) {
     justify-content: center;
     text-align: center;
     transform: rotate(-2deg);  
+}
+.polaroid:nth-child(2) {
+    transform: rotate(2deg);
+}
+.polaroid:nth-child(3) {
+    transform: rotate(-5deg);
 }
 .polaroid_photo {
     width: 50vh;
@@ -234,6 +249,10 @@ span:nth-child(12) {
     width: 100%;
     height: 100%;
 }
+.photo_title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
 .polaroid_content {
     flex: 1;
     height: 20vh;
@@ -243,6 +262,11 @@ span:nth-child(12) {
 /* ###### CONTACT SECTION ###### */
 .contact_card {
   background: #fff;
+  width: 450px;
+  height: 250px;
+  margin-bottom: 70px;
+  box-shadow: 3px 2px 7px 2px rgba(0,0,0,0.85);
+  transform: rotate(2deg); 
 }
 
 /* ###### BUTTONS ###### */
