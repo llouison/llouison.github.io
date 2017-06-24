@@ -1,4 +1,4 @@
-body{
+body {
 	background: url(../images/hero.jpg) no-repeat center center fixed;
 	background-size: cover;
 	filter: grayscale(40%);
@@ -9,106 +9,49 @@ body{
 	min-width: 100vw;
 	min-height: 100vh;
   line-height: 1.4em;
+  color: #222;
 }
 a {
   text-decoration: none;
-}
-
-/* ###### MENU ###### */
-.menu-wrapper {
-  position: fixed;
-  width: 250px;
-  height: 250px;
-  top: 0;
-  margin-top: 20px;
-  right: 75vw;
-}
-.menu {
-  position: relative;
-  width: 36px;
-  height: 6px;
-  background-color: #fff;
-  user-select: none;
-  transition: all 0.25s ease-in-out;
-  cursor: pointer;
-  margin: 5px;
   color: #fff;
-  perspective: 1000;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  tap-highlight-color: transparent;
 }
-.menu label {
-  cursor: pointer;
-  position: absolute;
-  font-size: 40px;
-  line-height: 30px;
-  top: -12px;
-  left: 48px;
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
-.menu:hover > ul.nav-links, .menu.open > ul.nav-links {
-  transition: all 0.25s ease-in-out;
-  opacity: 1;
-  width: 180px;
-  transform: translateX(15px);
-  pointer-events: auto;
+.bold {
+  font-weight: bold;
 }
-.menu:after, .menu:before {
-  content: "";
-  position: absolute;
-  width: 36px;
-  height: 6px;
-  background-color: #fff;
-  transition: all 0.25s ease-in-out;
+.invisible {
+  visibility: hidden;
 }
-.menu:after {
-  top: 12px;
+/* ###### Navigation ###### */
+nav ul {
+  display: flex;
+  flex-direction: row;
 }
-.menu:before {
-  top: -12px;
-}
-.menu:hover, .menu.open {
-  background-color: transparent;
-}
-.menu:hover::after, .menu:hover::before, .menu.open::after, .menu.open::before {
-  transition: all 0.3s ease-in-out;
-  width: 18px;
-}
-.menu:hover::after, .menu.open::after {
-  transform: translate(3px, -7px) rotate(405deg);
-}
-.menu:hover::before, .menu.open::before {
-  transform: translate(12px, 17px) rotate(-405deg);
-}
-.nav-links {
-  margin: 0;
-  padding: 36px 0 0 0;
-  opacity: 0;
-  transform: translateX(-15px);
-  transition: all 0.25s ease-in-out;
-  position: absolute;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-.nav-links li {
-  width: 100%;
-  padding: 4px 8px;
-  list-style-type: none;
+nav li {
+  list-style: none;
   font-size: 25px;
-  text-transform: uppercase;
-  transition: all 0.25s ease-in-out;
-  border-left: 2px solid #fff;
+  margin: 10px 10px 0;
+  transition: ease-in-out 0.4s;
 }
-.nav-links a{
-  text-decoration: none;
-  color: #fff;
+nav li:hover {
+  border-bottom: 2px solid #fff;
 }
-.nav-links li:hover, .active, a:hover {
-  color: #000;
+.heading {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #222;
 }
 /* ###### HERO ###### */
-.hero{
+#hero {
   width: 100vw;
 	height: 100vh;
   display:flex;
@@ -120,7 +63,7 @@ a {
   flex-direction: row;
   justify-content: center;
 }
-span {
+.name span {
   display: inline-block;
   color: #fff;
   font-size: 5em;
@@ -140,7 +83,7 @@ span:nth-child(4) {
 }
 span:nth-child(5) {
   animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1s both;
-  padding: 0 20px;
+  padding: 0 5px;
 }
 span:nth-child(6) {
   animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.2s both;
@@ -169,48 +112,32 @@ span:nth-child(12) {
   to {transform: rotateX(0deg);
   }
 }
-/* ###### DOWN ARROW ###### */
-.arrow{
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  /*animation-name: bounce;*/
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-}
-@keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
-}
 /* ###### ABOUT SECTION ###### */
 .note {
-    max-width: 40vw;
-    background: #F7E999;
-    padding: 40px;
-    border-radius: 6px/18px 0;
-    margin: 70px 10px;
-    box-shadow: 0px 4px 5px rgba(0,0,0,0.5); 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    transform: rotate(2deg);  
+  max-width: 35vw;
+  background: #F7E999;
+  padding: 40px;
+  border-radius: 6px/18px 0;
+  margin: 70px 10px;
+  box-shadow: 0px 4px 5px rgba(0,0,0,0.5); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(2deg);  
 }
 .note::before {
-	  content: ""; 
-    width: 20vw;
-	  height: 28px;
-    border-radius: 6px/18px 0;
-	  background: rgba(229, 229, 229, 0.40);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    position: relative;
-    bottom: 55px;
-    left: 30%;
+  content: ""; 
+  width: 20vw;
+  height: 28px;
+  border-radius: 6px/18px 0;
+  background: rgba(229, 229, 229, 0.40);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 55px;
+  left: 25%;
 }
-
-/* ###### WORK SECTION ###### */
+/* ###### PROJECTS SECTION ###### */
 #projects {
   width: 50vw;
   display: flex;
@@ -228,14 +155,13 @@ span:nth-child(12) {
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    transform: rotate(-2deg);  
+    text-align: center; 
 }
-.polaroid:nth-child(2) {
+.polaroid:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+.polaroid:nth-child(even) {
     transform: rotate(2deg);
-}
-.polaroid:nth-child(3) {
-    transform: rotate(-5deg);
 }
 .polaroid_photo {
     width: 50vh;
@@ -258,17 +184,32 @@ span:nth-child(12) {
     height: 20vh;
     width: 50vh;
 }
-
 /* ###### CONTACT SECTION ###### */
 .contact_card {
   background: #fff;
-  width: 450px;
-  height: 250px;
+  width: 425px;
+  height: 225px;
+  padding: 15px;
   margin-bottom: 70px;
   box-shadow: 3px 2px 7px 2px rgba(0,0,0,0.85);
   transform: rotate(2deg); 
+  display: flex;
+  flex-direction: column;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 25px;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  transition: linear 0.4s;
+}
+.icon:hover {
+  transform: rotate(30deg);
+}
 /* ###### BUTTONS ###### */
 .button {
     font-size: 1em;
@@ -276,67 +217,95 @@ span:nth-child(12) {
     padding: 10px;
     border: 1px dashed #222;
     border-radius: 10px;
-    background: transparent;
     margin: 20px;
     transition: all 0.4s ease;
     cursor: pointer;   
+    text-align: center;
 }
 .button:hover {
     color: #222;
-    background-color: #f4f4f4;
-    border: none;
-    box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75);
-}
-.black {
-    color: #222;
-    padding: 2px 8px;
     border: 1px solid #222;
-    border-radius: 6px;
-    margin: 0 5px;
+    box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.75);
 }
-
 /* ###### SOCIAL MEDIA ###### */
 .social_nav {
-  padding: 0;
-  list-style: none;
-  display: inline-block;
-  margin: 10px auto;
-}
-.social_nav li {
-  display: inline-block;
-  padding: 5px 0;
-}
-.social_nav a {
-  display: inline-block;
-  float: left;
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  color: #FFF;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  line-height: 48px;
-  background: #000;
-  position: relative;
-  transition: 0.5s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .social_nav li {
   margin: 0 10px;
 }
-.social_nav a {
-  background: none;
-  box-shadow: 0 0 4px 3px;
-  text-shadow: 0 0 1px #333;
-  transition: transform 0.4s, background 0.4s;
-  border-radius: 10%;
+/* ###### FOOTER ###### */
+footer {
+  color: #CA9077;
 }
-.social_nav a .fa {
-  transition: transform 1s;
+
+@media only screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .name span {
+    font-size: 40px;
+  }
+  .note {
+    max-width: 70vw;
+    padding: 20px;  
+    margin: 50px 10px;
+  }
+  .note::before {
+    bottom: 35px;
+    left: 35%;
+  }
+  .heading {
+    font-size: 25px;
+  }
+  #projects {
+    width: 100vw;
+    margin-bottom: 15px;
+  }
+  .polaroid {
+    width: 45vh;
+    height: 54vh;
+    margin-bottom: 50px;
+  }
+  .polaroid_photo {
+    width: 45vh;
+    height: 40.5vh;
+    border: 15px solid #f5f5f5;
+  }
+  .polaroid_content {
+    width: 45vh;
+  }
+  .button {
+    margin: 10px;
+  }
+  .contact_card {
+    background: #fff;
+    width: 45vh;
+    height: 27vh;
+    margin-bottom: 70px;
+  }
 }
-.social_nav a:hover .fa {
-  transform: rotate(-10deg) scale(3);
+@media only screen and (max-width: 400px) {
+  .name span {
+    font-size: 35px;
+  }
+  .note {
+    max-width: 70vw;
+  }
+  .button {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+  }
+  .container {
+    margin-top: 5px;
+  }
+  .icon {
+  width: 40px;
+  height: 40px;
+  transition: linear 0.4s;
 }
-.github, .linkedin, .gmail {
-  color: #fff;
 }
