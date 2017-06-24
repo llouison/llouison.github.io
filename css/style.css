@@ -54,14 +54,14 @@ nav li:hover {
 #hero {
   width: 100vw;
 	height: 100vh;
-  display:flex;
   flex-direction: column;
+}
+#hero, .name {
+  display: flex;
   justify-content: center;
 }
 .name {
-  display:flex;
   flex-direction: row;
-  justify-content: center;
 }
 .name span {
   display: inline-block;
