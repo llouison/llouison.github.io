@@ -10,26 +10,23 @@
   <link rel='stylesheet' type='text/css' href='./css/style.css'>
 </head>
 <body>
-	<div class="menu-wrapper">
-        <div class="menu">
-            <label>MENU</label>
-        		<ul class="nav-links">
-            		<li class="active"><a href="#hero" tabindex="1">Home</a></li>
-            		<li><a href="#about" tabindex="2">About</a></li>
-            		<li><a href="#work" tabindex="3">Projects</a></li>
-            		<li><a href="#contact" tabindex="4">Contact</a></li>
-        		</ul>
-   		</div>
-	</div>
-	<div class="hero" id="hero">
+    <nav>
+        <ul>
+            <li><a href="#about" tabindex="1">About</a></li>
+            <li><a href="#projects" tabindex="2">Projects</a></li>
+            <li><a href="#contact" tabindex="3">Contact</a></li>
+        </ul>
+    </nav>
+	<div id="hero">
         <div class="name">
-            <span>L</span><span>I</span><span>S</span><span>A</span><span> </span><span>L</span><span>O</span><span>U</span><span>I</span><span>S</span><span>O</span><span>N</span>
+            <span>L</span><span>I</span><span>S</span><span>A</span><span class="invisible">I</span><span>L</span><span>O</span><span>U</span><span>I</span><span>S</span><span>O</span><span>N</span>
         </div>
-		<a href="#about"><img src="images/arrow.png" alt="down arrow" class="arrow"></a>
-	</div> <!--end of hero div-->
-    <div class="note" id="about">
-        <h2>About Me</h2>
-        <p>I've always been aware of how important it is to ask the right questions and how much an environment has an affect on people. As a corporate Interior Designer I built schools and offices around the world, helping to make people more productive in the places they spent the most time. I realized that a large part of that time is spent interacting with a screen, and so I made the pivot to Web Development to translate my skills from the built environment to the web.</p>
+	</div>
+    <div id="about" class="note" tabindex="0">
+        <h2 class="heading">About Me</h2>
+        <p>I've always been aware of the importance a well designed environment has on users' productivity and happiness.</p>
+        </br> 
+        <p> As an Interior Designer, I created impactful spaces for people to work and learn in. As a Developer, I create those environments on the web.</p>
     </div>
     <div id="projects">
         <div class="polaroid">
@@ -43,46 +40,51 @@
             </div>
         </div>
         <div class="polaroid">
-            <div class="polaroid_photo"></div>
+            <div class="polaroid_photo"><img src="images/NowWereCookin.png" alt="Now We're Cookin"></div>
             <div class="polaroid_content">
                 <h2 class="photo_title">Now We're Cookin'</h2>
                 <div class="button_container">
-                    <a href='#' class="button">View Project</a>
-                    <a href='#' class="button">View Github</a>
+                    <a href="https://nowwerecookin.herokuapp.com/" target="_blank" class="button">View Project</a>
+                    <a href="https://github.com/llouison/Project_02_NWC" target="_blank" class="button">View Github</a>
                 </div>
             </div>
         </div>
         <div class="polaroid">
-            <div class="polaroid_photo"></div>
+            <div class="polaroid_photo"><img src="images/SkyCastWeather.png" alt="SkyCast Weather"></div>
             <div class="polaroid_content">
                 <h2 class="photo_title">SkyCast Weather</h2>
                 <div class="button_container">
-                    <a href='#' class="button">View Project</a>
-                    <a href='#' class="button">View Github</a>
+                    <a href="https://skycastweatherapp.herokuapp.com/" target="_blank"class="button">View Project</a>
+                    <a href="https://github.com/llouison/Weather_App" target="_blank" class="button">View Github</a>
                 </div>
             </div>
         </div>
         <div class="polaroid">
-            <div class="polaroid_photo"></div>
+            <div class="polaroid_photo"><img src="images/SonnySays.png" alt="Sonny Says"></div>
             <div class="polaroid_content">
                 <h2 class="photo_title">Sonny Says</h2>
                 <div class="button_container">
-                    <a href='#' class="button">View Project</a>
+                    <a href="http://lisalou-sonnysays.bitballoon.com/" target="_blank" class="button">View Project</a>
                     <a href='#' class="button">View Github</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="contact_card" id="contact">
-        <h2>Contact Me</h2>
+    <div id="contact" class="contact_card">
+        <h2 class="heading">Contact Me</h2>
+        <div class="container">
         <ul class="social_nav">
-            <li><a href="https://www.linkedin.com/in/lisa-louison" class="linkedin" target="_blank"><img src="images/linkedin.png" class="fa fa-linkedin"></a></li>
-            <li><a href="https://github.com/llouison" class="github" target="_blank"><img src="images/github.png" class="fa fa-github"></a></li>
-            <li><a href="#" class="gmail" target="_blank"><img src="images/gmail.png" class="fa fa-gmail"></a></li>
+            <li><a href="https://www.linkedin.com/in/lisa-louison" target="_blank"><img src="images/linkedin.png" class="icon" alt="LinkedIn"></a></li>
+            <li><a href="https://github.com/llouison" target="_blank"><img src="images/github.png" class="icon" alt="Github"></a></li>
+            <li><a href="mailto:lisamlouison@gmail.com" target="_blank"><img src="images/email.png" class="icon" alt="Email"></a></li>
+            <li><a href="http://lisalouison.blogspot.com/" target="_blank"><img src="images/blogger.png" class="icon" alt="Blogger"></a></li>
         </ul>
         <br/>
-        <span class="button"><a href="lisalouison_webdesign_resume.pdf" target="_blank">Download Resume</a></span>
+        <a href="lisalouison_webdesign_resume.pdf" target="_blank" class="button">Download Resume</a>
+        </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script> 
+    <footer>© 2017 LISA LOUISON </footer>
 </body>
+
 </html>
