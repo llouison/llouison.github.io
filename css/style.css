@@ -306,6 +306,9 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    background-size: 200vw 100vh;
+  }
   .name span {
     font-size: 40px;
   }
