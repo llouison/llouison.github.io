@@ -1,5 +1,5 @@
 body {
-	background: url(../images/hero2.jpg) no-repeat center center fixed #AD7052;
+	background: url(../images/hero.jpg) no-repeat center center #AD7052;
 	background-size: cover;
 	filter: grayscale(40%);
   font-family:  'Comfortaa', cursive;
@@ -9,6 +9,7 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
   line-height: 1.4em;
+  background-attachment: fixed;
 }
 a {
   text-decoration: none;
@@ -302,8 +303,15 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-size: 100vw 100vh;
+  .test {
+    height:100%;
+    width:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment:fixed;
+    background: url(../images/hero.jpg) #AD7052;
+    background-size: 700px 100%;
   }
   .name span {
     font-size: 40px;
