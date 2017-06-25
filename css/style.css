@@ -304,14 +304,11 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .test {
-    height:100%;
-    width:100%;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-    background-attachment:fixed;
+    height:100vh;
+    width:400px;
     background: url(../images/hero.jpg) #AD7052;
     background-size: 700px 100%;
+    position: fixed;
   }
   .name span {
     font-size: 40px;
