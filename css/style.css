@@ -1,5 +1,5 @@
 body {
-	background: url(../images/hero.jpg) no-repeat center center fixed;
+	background: url(../images/hero.jpg) no-repeat center center fixed #AD7052;
 	background-size: cover;
 	filter: grayscale(40%);
   font-family:  'Comfortaa', cursive;
