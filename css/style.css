@@ -9,7 +9,6 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
   line-height: 1.4em;
-  color: #222;
 }
 a {
   text-decoration: none;
@@ -23,9 +22,6 @@ a {
   top: 0px;
   transition: ease-in-out 0.4s;
 }
-.bold {
-  font-weight: bold;
-}
 .invisible {
   visibility: hidden;
 }
@@ -36,7 +32,6 @@ a {
   right: 20px;
   width: 40px;
   height: 40px;
-  cursor: pointer;
   z-index: 2;
 }
 #menu input {
@@ -303,6 +298,7 @@ span:nth-child(12) {
 /* ###### FOOTER ###### */
 footer {
   color: #CA9077;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -352,6 +348,9 @@ footer {
   }
 }
 @media only screen and (max-width: 400px) {
+  #menu span, #menu span:before, #menu span:after {
+    height: 3px;
+  }
   .name span {
     font-size: 35px;
   }
