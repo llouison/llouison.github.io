@@ -16,11 +16,11 @@ window.onload = function() {
     }
 
     document.getElementById('next').addEventListener('click', function() {
-        plusDivs(-1);
+        plusDivs(1);
     });
 
     document.getElementById('previous').addEventListener('click', function() {
-        plusDivs(+1);
+        plusDivs(-1);
     });
 
     let slideIndex = 1;
@@ -31,14 +31,19 @@ window.onload = function() {
     }
 
     function showDivs(n) {
-        let i;
-        const x = document.getElementsByClassName("polaroid");
+        // let i;
+        const x = document.querySelectorAll(".polaroid");
+        const dots = document.querySelectorAll(".dot");
         if (n > x.length) {slideIndex = 1} 
-        if (n < 1) {slideIndex = x.length} ;
+        if (n < 1) {slideIndex = x.length};
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none"; 
         }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = "dot empty"
+        }
         x[slideIndex-1].style.display = "block"; 
+        dots[slideIndex-1].className = "dot filled";
     }
 
 }
