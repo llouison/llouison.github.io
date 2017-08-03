@@ -192,7 +192,11 @@ span:nth-child(12) {
   text-align: center;
   transform: rotate(2deg);  
 }
-.note::before {
+.second {
+  transform: rotate(-2deg);
+  background: #CAF4B9;
+}
+.first::before {
   content: ""; 
   width: 20vw;
   height: 28px;
@@ -246,6 +250,7 @@ span:nth-child(12) {
   width: 125px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .dot {
   width: 20px;
@@ -379,6 +384,7 @@ footer {
     width: 100px;
     position: relative;
     bottom: 20px;
+    margin-bottom: 0;
   }
   .dot {
     width: 15px;
